@@ -20,9 +20,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "standard && react-scripts test",
+    "test": "standard --verbose | snazzy && react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/standard",
+    "lint": "standard --verbose | snazzy",
     "lint-fix": "./node_modules/.bin/standard --fix"
   },
   "eslintConfig": {
@@ -48,6 +48,12 @@
     "standard": "^16.0.3"
   },
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/out/",
+      "/lib/select2/",
+      "/lib/ckeditor/",
+      "tmp.js"
+    ]
   }
 }
