@@ -49,13 +49,22 @@
     "husky": "^7.0.2",
     "standard": "^16.0.3"
   },
+  "husky": {
+    "skipCI": true,
+    "hooks": {
+      "pre-commit": "npm lint"
+    }
+  },
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
       "**/out/",
       "/lib/select2/",
       "/lib/ckeditor/",
-      "tmp.js"
+      "tmp.js",
+      "node_modules",
+      "__tests__",
+      "tests"
     ]
   }
 }

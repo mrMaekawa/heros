@@ -1,5 +1,7 @@
 
 # HEROS
+[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 Marcelo Maekawa
 
 ## Sobre o projeto:
@@ -15,7 +17,7 @@ https://superheroapi.com/
 - Clean Code, Atomic Commits e TDD
 - Atomic Design
 - Virtualizado e Contêinerizado (Docker)
-- ReactJs (CRA)
+- ReactJs (CRA - Create React App)
 - Typescript
 - Redux Lib (Saga)
 - JavaScript Standard Style (StandardJS)
@@ -26,4 +28,10 @@ Eu comecei esse projeto usando um boilerplate da ARc, que apesar de acelerar mui
 
 ### RoadMap:
 - Iniciar o Git e linkar o repo remoto
+- Bootstrapping o projeto com CRA
+- Instalar o node-sass e renomear arquivos
+- Instalar o typescript e renomear arquivos
+- Instalar o StandardJS, suas dependências e atualizar o package.json
+- Instalar o Husky e add StandardJS ao precommit
+
 
