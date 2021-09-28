@@ -19,7 +19,7 @@ https://superheroapi.com/
 - Virtualizado e Contêinerizado (Docker)
 - ReactJs (CRA - Create React App)
 - Typescript
-- Redux Lib (Saga)
+- Redux Libs 
 - JavaScript Standard Style (StandardJS)
 - Preprocessar o CSS (SCSS)
 
@@ -33,5 +33,5 @@ Eu comecei esse projeto usando um boilerplate da ARc, que apesar de acelerar mui
 - Instalar o typescript e renomear arquivos
 - Instalar o StandardJS, suas dependências e atualizar o package.json
 - Instalar o Husky e add StandardJS ao precommit
-
-
+- Instalar Redux
+- Instalar Styled Components
