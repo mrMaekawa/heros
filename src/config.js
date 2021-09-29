@@ -8,7 +8,9 @@ const config = {
     gtmId: 'GTM-KP8VSG4',
   },
   test: {},
-  development: {},
+  development: {
+    public_url: 'http://localhost:3000/'
+  },
   production: {},
 }
 

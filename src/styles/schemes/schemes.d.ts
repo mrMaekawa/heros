@@ -7,6 +7,8 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secondary: string;
+      tertiary: string;
+      quaternary: string;
     }
 
     textcolors: {
@@ -16,6 +18,14 @@ declare module 'styled-components' {
   
       paragraph1: string;
       paragraph2: string;
+      paragraph3: string;
     }
+
+    bgimg:{
+      mobile: string;
+      desk: string;
+    }
+
+    logo: string;
   }
 }

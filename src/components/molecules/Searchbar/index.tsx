@@ -2,10 +2,10 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { Container } from './styles'
+import { ButtonForm } from '../../index'
 
-
-import { AllState } from '../../state/Search/types'
-import { searchCharacter, changeTerm } from '../../state/Search/actions'
+import { AllState } from '../../../state/Search/types'
+import { searchCharacter, changeTerm } from '../../../state/Search/actions'
 
 export default function Searchbar() {
   
@@ -24,8 +24,8 @@ export default function Searchbar() {
 
   return (
     <Container>
-      <input onChange={ updateInputValue } />
-      <button onClick={ getCharacter } >BUSCAR</button>
+      <input onChange={ updateInputValue } placeholder={ 'ex. super, spider, thanos, etc... ' } />
+      <ButtonForm onClick={ getCharacter } />
     </Container>
   )
 }

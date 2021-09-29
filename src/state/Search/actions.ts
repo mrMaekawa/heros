@@ -16,7 +16,6 @@ export const searchCharacter = (term:string = '') => {
 
     try {
       const response = await service.get(`search/${term}`);
-      console.log(response)
       if(response.data.results){
         dispatch({
           type: ActionTypes.FETCH_SEARCH_CHARACTER_SUCCESS,

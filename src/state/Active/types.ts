@@ -1,20 +1,22 @@
 export enum ActionTypes {
-  SET_CHARACTER_ACTIVE = 'SET_CHARACTER_ACTIVE'
+  SET_CHARACTER_ACTIVE = 'SET_CHARACTER_ACTIVE',
+  CLEAR_CHARACTER_ACTIVE = 'CLEAR_CHARACTER_ACTIVE'
 }
 
 export interface SetCharacterActiveAction {
   type: ActionTypes.SET_CHARACTER_ACTIVE;
-  active: ListCharacter;
+  active?: ListCharacter;
 }
 
 export interface ListCharacter {
   activeCharacter?: object | ListCharResults;
-  error?: string;
-  'results-for'?: string;
-  results?: [] | ListCharResults[];
+  modal?: boolean;
 }
 
-interface ListCharResults {
+export interface AllState{
+  Search: ListCharacter;
+}
+export interface ListCharResults {
     id: string;
     name?: string;
     powerstats?: ListCharResultPowerstats;
@@ -25,7 +27,7 @@ interface ListCharResults {
     image?: ListCharResultImage;
   }
 
-interface ListCharResultPowerstats {
+  export interface ListCharResultPowerstats {
   intelligence?: string;
   strength?: string;
   speed?: string;
@@ -34,7 +36,7 @@ interface ListCharResultPowerstats {
   combat?: string;
 }
 
-interface ListCharResultBiography {
+export interface ListCharResultBiography {
   'full-name'?: string;
   'alter-egos'?: string;
   aliases?: string[];
@@ -44,7 +46,7 @@ interface ListCharResultBiography {
   alignment?: string;
 }
 
-interface ListCharResultAppearance {
+export interface ListCharResultAppearance {
   gender?: string;
   race?: string;
   height?: string[];
@@ -53,12 +55,12 @@ interface ListCharResultAppearance {
   'hair-color'?: string;
 }
 
-interface ListCharResultWork {
+export interface ListCharResultWork {
   occupation?: string;
   base?: string;
 }
 
-interface ListCharResultConnections {
+export interface ListCharResultConnections {
   'group-affiliation'?: string;
   relatives?: string;
 }
