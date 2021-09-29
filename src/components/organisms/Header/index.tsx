@@ -3,20 +3,20 @@ import Switch from 'react-switch'
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import { ActionTypes } from '../../../state/DarkMode/types'
+import * as Types from '../../../state/DarkMode/types'
 import { Container } from './styles'
 
 const Header: React.FC = () => {
 
-  const darkThemeEnabled:any = useSelector((state) => state)
+  const darkThemeEnabled = useSelector((state:Types.AllState) => state.Scheme.mode)
   const dispatch = useDispatch()
 
   return (
     <Container>
       SuperHerois
       <Switch
-        onChange={() => dispatch({ type: ActionTypes.SET_SCHEME_ACTIVE })}
-        checked={darkThemeEnabled.Scheme.mode}
+        onChange={() => dispatch({ type: Types.ActionTypes.SET_SCHEME_ACTIVE })}
+        checked={darkThemeEnabled}
       >
 
       </Switch>

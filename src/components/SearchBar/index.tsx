@@ -1,12 +1,15 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { Container } from './styles'
 
+
+import { AllState } from '../../state/Search/types'
 import { searchCharacter, changeTerm } from '../../state/Search/actions'
 
 export default function Searchbar() {
   
+  const termValue = useSelector((state: AllState) => state.Search.term)
   const dispatch = useDispatch();
 
   const updateInputValue = (e:any) => {
@@ -14,7 +17,9 @@ export default function Searchbar() {
   }
 
   const getCharacter = () => {
-    dispatch(searchCharacter( 'spider'))
+    if (termValue){
+      dispatch(searchCharacter( termValue ))
+    }
   }
 
   return (

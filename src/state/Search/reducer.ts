@@ -20,7 +20,7 @@ const Search = (state: SearchResult = INITIAL_LIST, action: ActionPost) => {
     case ActionTypes.FETCH_SEARCH_CHARACTER:
       return {
         ...state,
-        loading: true,
+        loading: true
       }
     case ActionTypes.FETCH_SEARCH_CHARACTER_SUCCESS:
       return {
@@ -35,7 +35,9 @@ const Search = (state: SearchResult = INITIAL_LIST, action: ActionPost) => {
       return {
         ...state,
         error: action.payload,
+        results: [],
         loading: false,
+        success: false,
       }
     default:
       return state;

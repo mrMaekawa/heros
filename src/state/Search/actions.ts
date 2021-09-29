@@ -8,24 +8,32 @@ export const changeTerm = (term:string = '') =>{
   }
 }
 
-export const searchCharacter = (term:string = 'super') => {
+export const searchCharacter = (term:string = '') => {
+  
   return async(dispatch:any) => {
-    dispatch({
-      type: ActionTypes.FETCH_SEARCH_CHARACTER
-    })
+    
+    dispatch({ type: ActionTypes.FETCH_SEARCH_CHARACTER })
 
     try {
       const response = await service.get(`search/${term}`);
-
-      dispatch({
-        type: ActionTypes.FETCH_SEARCH_CHARACTER_SUCCESS,
-        payload: response.data
-      })
+      console.log(response)
+      if(response.data.results){
+        dispatch({
+          type: ActionTypes.FETCH_SEARCH_CHARACTER_SUCCESS,
+          payload: response.data
+        })
+      }else{
+        dispatch({
+          type: ActionTypes.FETCH_SEARCH_CHARACTER_ERROR,
+          payload: `Não encontramos nenhum personagem chamado <b>'${term}'</b>!`
+        })
+      }
     }
     catch(e) {
       dispatch({
         type: ActionTypes.FETCH_SEARCH_CHARACTER_ERROR,
-        payload: 'Erro ao buscar os personagens!'
+        payload: `Temos um problema na comunicação com a API. 
+        Tente novamente em instantes!`
       })
     }
   }

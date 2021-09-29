@@ -27,6 +27,11 @@ export interface FetchSerchCharError {
 
 export type ActionPost = FetchSerchChar | FetchSerchCharSuccess | FetchSerchCharError | ChangeTermValue
 
+
+export interface AllState{
+  Search: SearchResult;
+}
+
 export interface SearchResult {
   loading?: boolean;
   success?: boolean;

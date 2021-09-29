@@ -10,3 +10,7 @@ export interface SetSchemeActiveAction {
 export interface SchemeState {
   mode: boolean;
 }
+
+export interface AllState{
+  Scheme: SchemeState;
+}
