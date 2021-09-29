@@ -11,7 +11,9 @@ const config = {
   development: {
     public_url: 'http://localhost:3000/'
   },
-  production: {},
+  production: {
+    public_url: 'https://heros-pnnu8dp1q-mrmaekawa.vercel.app/'
+  },
 }
 
 export default merge(config.all, config[config.all.env])
