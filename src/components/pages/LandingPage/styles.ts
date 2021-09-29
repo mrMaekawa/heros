@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   height: 177.778vw;
-  width: 100vw;
+  width: 100%;
   position:relative;
 
   @media(min-width:991px) {
@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   .bg {
     height: 175.778vw;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top:1vw;
     left:0;

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   height:8.99vw;
-  width:100vw;
+  width:100%;
   margin-top:8.99vw;
   background-color: ${ props => props.theme.colors.primary };
   color: ${ props => props.theme.textcolors.header1 };
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   @media(min-width:991px) {
     height:2.292vw;
-    width:100vw;
+    width:100%;
     position:fixed;
     left:0;
     bottom: 0;
