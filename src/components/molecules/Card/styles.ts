@@ -11,6 +11,14 @@ export const Container = styled.div`
   position:relative;
   transition:transform 300ms;
 
+  @media(min-width:991px) {
+    width:6.563vw;
+    min-width:6.563vw;
+    height:9.167vw;
+    box-shadow: 0px .26vw .417vw rgba(0, 0, 0, 0.25);
+    border-radius: .781vw;
+  }
+
   &:hover{
     transform: scale(1.1);
   }
@@ -44,6 +52,13 @@ export const Container = styled.div`
     font-family: 'Source Serif Pro', serif;
     color:${props => props.theme.textcolors.header1};
     
+    @media(min-width:991px) {
+      height:4.583vw;
+      border-radius: .781vw .781vw 0 0;
+      padding:.469vw;
+      font-size:1.042vw;
+    }
+
     span{
       z-index:30;
     }

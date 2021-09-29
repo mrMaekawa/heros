@@ -16,6 +16,14 @@ export const Container = styled.div`
   position: relative;
   cursor: pointer;
 
+  @media(min-width:991px) {
+    width:9.531vw;
+    height:2.24vw;
+    font-size: 1.146vw;
+    line-height:2.24vw;
+    border-radius:.781vw;
+  }
+
   &:after{
     content:'';
     width:1.212vw;
@@ -29,6 +37,13 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-image: url(${config.public_url}/images/setinha.svg);
     display:block;
+
+    @media(min-width:991px) {
+      width:.625vw;
+      height:.625vw;
+      top:.833vw;
+      right:.521vw;
+    }
   }
 
   &:hover{

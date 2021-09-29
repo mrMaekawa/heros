@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { KeyboardEvent } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { Container } from './styles'
@@ -22,9 +22,19 @@ export default function Searchbar() {
     }
   }
 
+  const handleKeywordKeypress = (e: KeyboardEvent) => {
+    if (termValue && e.key === 'Enter'){
+      dispatch(searchCharacter( termValue ))
+    }
+  };
+
   return (
     <Container>
-      <input onChange={ updateInputValue } placeholder={ 'ex. super, spider, thanos, etc... ' } />
+      <input 
+        onChange={ updateInputValue } 
+        placeholder={ 'ex. super, spider, thanos, etc... ' }
+        onKeyPress={ handleKeywordKeypress }
+      />
       <ButtonForm onClick={ getCharacter } />
     </Container>
   )

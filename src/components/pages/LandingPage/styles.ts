@@ -5,6 +5,10 @@ export const Container = styled.div`
   width: 100vw;
   position:relative;
 
+  @media(min-width:991px) {
+    height: 51.302vw;
+  }
+
   .bg {
     height: 175.778vw;
     width: 100vw;
@@ -16,6 +20,11 @@ export const Container = styled.div`
     background-size: cover;
     background-image: url(${props => props.theme.bgimg.mobile });
     z-index: -1;
+
+    @media(min-width:991px) {
+      height: 51.302vw;
+      background-image: url(${props => props.theme.bgimg.desk });
+    }
   }
 
   .box{
@@ -33,5 +42,13 @@ export const Container = styled.div`
     color: ${props => props.theme.textcolors.paragraph3 };
     text-align: center;
     z-index:100;
+
+    @media(min-width:991px) {
+      width:85.156vw;
+      height:21.563vw;
+      top:24.323vw;
+      left:9.115vw;
+      font-size:3.073vw;
+    }
   }
 `
