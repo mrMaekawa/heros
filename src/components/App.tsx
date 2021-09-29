@@ -1,8 +1,8 @@
 import React  from 'react'
-import { ThemeProvider } from 'styled-components'
+import { Provider as ReduxProvider } from 'react-redux'
 
-import DayScheme from '../styles/schemes/DayScheme'
-import NightScheme from '../styles/schemes/NightScheme'
+import Store from '../state/store'
+import SchemeProvider from '../state/DarkMode/effects'
 
 import GlobalStyle from '../styles/global'
 import { LandingPage } from './'
@@ -10,10 +10,12 @@ import { LandingPage } from './'
 const App: React.FC = () => {
   return (
     <div>
-      <ThemeProvider theme={DayScheme}>
-        <GlobalStyle />
-        <LandingPage />
-      </ThemeProvider>
+      <ReduxProvider store={Store}>
+        <SchemeProvider>
+          <GlobalStyle />
+          <LandingPage />
+        </SchemeProvider>
+      </ReduxProvider>
     </div>
   )
 }
