@@ -1,4 +1,3 @@
-![Herói](https://heros-vert.vercel.app/images/icon.png)
 # HEROS
 Marcelo Maekawa
 
@@ -61,3 +60,4 @@ No estado atual do projeto, consegui incluir os seguintes destaques:
 - Styled Components
 - Docker
 
+![Herói](https://heros-vert.vercel.app/images/icon.png)
