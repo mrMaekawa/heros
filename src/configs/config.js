@@ -9,10 +9,10 @@ const config = {
   },
   test: {},
   development: {
-    public_url: 'https://heros-vert.vercel.app/'
+    public_url: 'https://heros-vert.vercel.app'
   },
   production: {
-    public_url: 'https://heros-vert.vercel.app/'
+    public_url: 'https://heros-vert.vercel.app'
   },
 }
 
