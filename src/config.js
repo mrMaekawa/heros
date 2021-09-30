@@ -12,7 +12,7 @@ const config = {
     public_url: 'http://localhost:3000/'
   },
   production: {
-    public_url: 'https://heros-pnnu8dp1q-mrmaekawa.vercel.app/'
+    public_url: 'https://heros-vert.vercel.app/'
   },
 }
 
