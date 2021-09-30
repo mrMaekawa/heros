@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import config from '../../../config'
+import config from '../../../configs/config'
 
 export const Container = styled.div`
   height:5.758vw;

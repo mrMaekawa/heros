@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import config from '../../../config'
+import config from '../../../configs/config'
 
 export const Container = styled.div`
   width:11.616vw !important;

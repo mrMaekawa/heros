@@ -1,4 +1,4 @@
-import config from '../../config'
+import config from '../../configs/config'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {

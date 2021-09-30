@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+  heroi_app:
+    container_name: heroi
+    build:
+      context: .
+      dockerfile: docker-local/Dockerfile
+      args:
+        PRODUCTION: 'false'
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
