@@ -9,7 +9,7 @@ const config = {
   },
   test: {},
   development: {
-    public_url: 'http://localhost:3000/'
+    public_url: 'https://heros-vert.vercel.app/'
   },
   production: {
     public_url: 'https://heros-vert.vercel.app/'
