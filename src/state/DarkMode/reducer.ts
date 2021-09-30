@@ -1,13 +1,21 @@
-import { ActionTypes } from "./types"
-import { SetSchemeActiveAction, SchemeState } from './types';
+import { ActionTypes, SetSchemeActiveAction, SchemeState } from './types';
 
-export default function Scheme(state: SchemeState =  { mode: false }, action: SetSchemeActiveAction) {
+const InitialState: boolean =  localStorage.getItem('scheme') === 'true' ?  false  :  true
 
+export default function Scheme(state: SchemeState =  {mode: InitialState}, action: SetSchemeActiveAction) {
+  
+  if(!state.mode){
+    localStorage.setItem('scheme', 'true');
+  }else{
+    localStorage.setItem('scheme', 'false');
+  }
+  
   switch (action.type) {
     case ActionTypes.SET_SCHEME_ACTIVE:
+      
       return { 
         ...state,
-        mode: !state.mode
+        mode: !state.mode        
       };
   
     default:

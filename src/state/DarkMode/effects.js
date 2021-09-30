@@ -8,6 +8,12 @@ const SchemeProvider = ({children}) => {
 
   const schemeActive = useSelector((state) => state.Scheme.mode) ? NightScheme : DayScheme
 
+  if(schemeActive.title === 'DayScheme'){
+    localStorage.setItem('scheme', 'true');
+  }else{
+    localStorage.setItem('scheme', 'false');
+  }
+
   return (
     <ThemeProvider theme={ schemeActive } >
       {children}

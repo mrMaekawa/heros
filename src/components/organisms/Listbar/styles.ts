@@ -14,7 +14,7 @@ export const Container = styled.div`
   @media(min-width:991px) {
     height:12.5vw;
     padding: 0 1.563vw;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   &.between{
